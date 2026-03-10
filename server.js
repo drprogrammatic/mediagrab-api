@@ -18,7 +18,7 @@ app.use(helmet());
 // ===== CORS =====
 // Allow your Netlify frontend to call this API
 const allowedOrigins = [
-    process.env.FRONTEND_URL || 'https://your-site.netlify.app',
+    process.env.FRONTEND_URL || 'wonderful-nougat-6a99ce.netlify.app',
     'http://localhost:3000',
     'http://localhost:5500',
     'http://127.0.0.1:5500',
@@ -81,3 +81,4 @@ app.listen(PORT, () => {
     console.log(`   Info:   http://localhost:${PORT}/api/info?url=<video_url>`);
     console.log(`   Download: http://localhost:${PORT}/api/download?url=<video_url>&format=mp4\n`);
 });
+
