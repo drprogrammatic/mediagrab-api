@@ -1,0 +1,17 @@
+# Render.com deployment configuration
+# This file tells Render how to build and run the backend
+
+services:
+  - type: web
+    name: mediagrab-api
+    runtime: node
+    plan: free
+    buildCommand: |
+      npm install
+      pip install yt-dlp
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        sync: false  # Set this in the Render dashboard
